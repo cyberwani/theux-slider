@@ -56,7 +56,7 @@ Playing with the parameters:
 
 To use shortcode within a PHP file (outside the post editor).
      
-     <php echo do_shortcode('[theux_slider]'); ?>
+     <?php echo do_shortcode('[theux_slider]'); ?>
 
 
 **Available parameters and their default values**
