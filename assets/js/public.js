@@ -1,12 +1,8 @@
 (function ($) {
     "use strict";
-
-    console.log(tusparams.autochange);
        
     $(window).load(function () {
-    
         $('.theux-slider').fractionSlider({
-    
             'controls' : tusparams.controls, // controls on/off
             'pager' : tusparams.pager, // pager on/off
             'autoChange' : tusparams.autochange, // auto change slides
