@@ -1,8 +1,8 @@
-(function ($) {
-    "use strict";
+;(function($, doc, win) {
+  "use strict";
        
     $(window).load(function () {
-        $('.theux-slider').fractionSlider({
+        $('.slider').fractionSlider({
             'controls' : tusparams.controls, // controls on/off
             'pager' : tusparams.pager, // pager on/off
             'autoChange' : tusparams.autochange, // auto change slides
@@ -19,4 +19,4 @@
             'dimensions': tusparams.dimensions, // slider dimensions
         });
     });
-}(jQuery));
+})(jQuery, document, window);

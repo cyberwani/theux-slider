@@ -134,7 +134,7 @@ know if it's only me, but that is nonsense.
 
 == Acknowledges ==
 
- This plugin only exists because of some amazing people out there and their wonderful work. Special thanks to:
+ This plugin only exists because of some amazing people out there. A very special thanks to:
 
 * Gijs Jorissen - [Wordpress-Cuztom-Helper](http://https://github.com/Gizburdt/Wordpress-Cuztom-Helper)
 * Mario Jäckle - [FractionSlider](http://http://jacksbox.de/stuff/jquery-fractionslider/)

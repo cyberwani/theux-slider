@@ -106,7 +106,7 @@ if ( !class_exists('TheUx_Slider') ) {
 
 
 		/**
-		 * Register and enqueue admin-specific style sheet.
+		 * Enqueue admin-specific style sheet.
 		 */
 		public function enqueue_admin_styles($hook) {
 
@@ -117,7 +117,7 @@ if ( !class_exists('TheUx_Slider') ) {
 
 			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), $this->version );
 		}
-
+		
 
 		/**
 		 * Enqueue public style sheet.
@@ -131,8 +131,8 @@ if ( !class_exists('TheUx_Slider') ) {
 		 * Enqueue and register public JavaScript files.
 		 */
 		public function enqueue_scripts() {
-			wp_enqueue_script( $this->plugin_slug . '-slider-script', plugins_url( 'assets/js/jquery.fractionslider.min.js', __FILE__ ), array( 'jquery' ), '0.9.9.8');
-			wp_register_script ( $this->plugin_slug . '-public-script', plugins_url( 'assets/js/public.js', __FILE__ ), array( 'jquery' ), $this->version, TRUE);
+			wp_enqueue_script( $this->plugin_slug . '-slider-script', plugins_url( 'assets/js/jquery.fractionslider.min.js', __FILE__ ), array( 'jquery' ), '0.9.9.9');
+			wp_register_script ( $this->plugin_slug . '-public-script', plugins_url( 'assets/js/public.js', __FILE__ ), array( 'tus-slider-script' ), $this->version, TRUE);
 		}
 
 
@@ -163,9 +163,7 @@ if ( !class_exists('TheUx_Slider') ) {
 			);
 			
 			$slideshow_att = $data['slideshow'];
-
 			ob_start();
-
 			theux_slider( $slideshow = $slideshow_att );	
 			$theux_slider_content = ob_get_clean();
 			
