@@ -6,9 +6,9 @@
  * Author: Daniel Zilli
  * Author URI: http://theux.co
  * License: GPLv2 (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
- * Version: 1.0.0
+ * Version: 0.9.9
  * Text Domain: tus
- * Domain Path: /assets/lang
+ * Domain Path: /assets/languages
  *
  * TheUx Slider is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -62,7 +62,7 @@ if ( !class_exists('TheUx_Slider') ) {
 		/**
 		 * Plugin version, used for cache-busting of style and script file references.
 		 */
-		protected $version = '1.0.0';
+		const VERSION = '1.0.0';
 
 
 		/**
@@ -88,7 +88,7 @@ if ( !class_exists('TheUx_Slider') ) {
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 
 			/* Shortcode */
-			add_shortcode( 'theux_slider', array( $this, 'tus_shortcode' ) );
+			add_shortcode( 'slider', array( $this, 'tus_shortcode' ) );
 		}
 
 
@@ -101,7 +101,7 @@ if ( !class_exists('TheUx_Slider') ) {
 			$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
 
 			load_textdomain( $domain, WP_LANG_DIR . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
-			load_plugin_textdomain( $domain, FALSE, basename( dirname( __FILE__ ) ) . '/assets/lang/' );
+			load_plugin_textdomain( $domain, FALSE, basename( dirname( __FILE__ ) ) . '/assets/languages/' );
 		}
 
 
@@ -115,7 +115,7 @@ if ( !class_exists('TheUx_Slider') ) {
 				return;
 			}
 
-			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), $this->version );
+			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), self::VERSION );
 		}
 		
 
@@ -123,7 +123,7 @@ if ( !class_exists('TheUx_Slider') ) {
 		 * Enqueue public style sheet.
 		 */
 		public function enqueue_styles() {
-			wp_enqueue_style( $this->plugin_slug . '-plugin-styles', plugins_url( 'assets/css/public.css', __FILE__ ), array(), $this->version );
+			wp_enqueue_style( $this->plugin_slug . '-plugin-styles', plugins_url( 'assets/css/public.css', __FILE__ ), array(), self::VERSION );
 		}
 
 
@@ -132,7 +132,7 @@ if ( !class_exists('TheUx_Slider') ) {
 		 */
 		public function enqueue_scripts() {
 			wp_enqueue_script( $this->plugin_slug . '-slider-script', plugins_url( 'assets/js/jquery.fractionslider.min.js', __FILE__ ), array( 'jquery' ), '0.9.9.9');
-			wp_register_script ( $this->plugin_slug . '-public-script', plugins_url( 'assets/js/public.js', __FILE__ ), array( 'tus-slider-script' ), $this->version, TRUE);
+			wp_register_script ( $this->plugin_slug . '-public-script', plugins_url( 'assets/js/public.js', __FILE__ ), array( 'tus-slider-script' ), self::VERSION, TRUE);
 		}
 
 
@@ -180,6 +180,5 @@ if ( !class_exists('TheUx_Slider') ) {
 	 * Initialise the plugin.
 	 */
 	new TheUx_Slider();
-
 
 } // End if class_exists check.

@@ -3,7 +3,7 @@
 Tags: slider, parallax, slideshow   
 Requires at least: 3.5.1   
 Tested up to: 3.6   
-Stable tag: 1.0.0   
+Stable tag: 0.9.9  
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,7 @@ TheUx Slider is a premium slider with a twist. No tricks, no lite version, no ad
 
 = Features =
 
-*   TheUx Serie.
+*   TheUx Series.
 *   100% Responsive.
 *   Animate multiple elements.
 *   Full control over each element.
@@ -35,7 +35,7 @@ TheUx Slider is a premium slider with a twist. No tricks, no lite version, no ad
 
 = TheUx Serie =
 
-TheUx is a premium open source series of WordPress plugins. More than a well crafted code, our signature is to be an unbranded plugin. No lite version, no ads, no donation buttons, no backlinks and no fancy UI. TheUx series use the standard WordPress UI and coding convention. It's a real premium plugin for free.
+TheUx is a premium open source series of WordPress plugins. More than a handy crafted code, our signature is to be an unbranded plugin. No lite version, no ads, no donation buttons, no backlinks and no fancy UI. TheUx series use the standard WordPress UI and coding convention. It's a real premium plugin for free.
 
 
 == Installation ==
@@ -47,16 +47,16 @@ TheUx is a premium open source series of WordPress plugins. More than a well cra
 
 It's very easy to include the slider on your theme. Just use the following shortcode on any page/post.
 
-    [theux_slider]
+    [slider]
 
 Playing with the parameters:
 
-    [theux_slider dimensions="900,300" autochange=true pauseonhover=true]
+    [slider dimensions="900,300" autochange=true pauseonhover=true]
 
 
 To use shortcode within a PHP file (outside the post editor).
      
-     <?php echo do_shortcode('[theux_slider]'); ?>
+     <?php echo do_shortcode('[slider]'); ?>
 
 
 **Available parameters and their default values**
@@ -142,9 +142,9 @@ know if it's only me, but that is nonsense.
 
 == Change Log ==
 
-= 1.0.0 =
+## 0.9.9 (10 September 2013)
 
-* First release of TheUx Slider.
+* Beta release.
 
 
 == License ==

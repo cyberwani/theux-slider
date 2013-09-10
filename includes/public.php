@@ -25,7 +25,6 @@ $args = array(
 $original_query = $wp_query;
 $wp_query = NULL;
 
-
 $wp_query = new WP_Query( $args ); ?>
 <div class="slider-wrapper">
 	<div class="slider">

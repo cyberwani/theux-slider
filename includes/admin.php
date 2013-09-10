@@ -38,20 +38,20 @@ $tus  = new Cuztom_Post_Type( 'theux_slider',
  *
  * @since	1.0.0
  */
-$tus->add_taxonomy( 'slideshow', 
-	array(
-    'show_admin_column' 	=> TRUE,
-    'admin_column_sortable' => TRUE,
-    'admin_column_filter' 	=> TRUE,
-	)
-);
-
+$slideshow = register_cuztom_taxonomy( 'Slideshow', 'theux_slider', 
+        array(
+            'show_admin_column'     => TRUE,
+            'admin_column_sortable' => TRUE,
+            'admin_column_filter'   => TRUE,
+            'hierarchical' 			=> FALSE,
+        ));
 
 /**
  * Register the meta-boxes.
  *
  * @since	1.0.0
  */
+
 
 /* Background options */
 $tus->add_meta_box( 

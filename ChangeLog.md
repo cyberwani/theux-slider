@@ -1,5 +1,3 @@
+## 0.9.9 (10 September 2013)
 
-
-## 1.0.0 (06 August 2013)
-
-* First release.
+* Beta release.
