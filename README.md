@@ -142,7 +142,7 @@ know if it's only me, but that is nonsense.
 
 == Change Log ==
 
-## 0.9.9 (10 September 2013)
+= 0.9.9 (10 September 2013) =
 
 * Beta release.
 
